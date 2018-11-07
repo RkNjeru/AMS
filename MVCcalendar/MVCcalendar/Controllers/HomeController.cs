@@ -23,6 +23,11 @@ namespace MVCcalendar.Controllers
             }
         }
 
+        public ActionResult Contacts()
+        {
+            return View();
+        }
+
         [HttpPost]
         public JsonResult SaveEvent(Appointment e)
         {
