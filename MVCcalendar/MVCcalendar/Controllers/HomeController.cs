@@ -14,6 +14,7 @@ namespace MVCcalendar.Controllers
             return View();
         }
 
+
         public JsonResult GetEvents()
         {
             using (DatabaseEntities dc = new DatabaseEntities())
@@ -21,6 +22,11 @@ namespace MVCcalendar.Controllers
                 var events = dc.Appointments.ToList();
                 return new JsonResult { Data = events, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }
+        }
+
+        public ActionResult Contacts()
+        {
+            return View();
         }
 
         [HttpPost]
