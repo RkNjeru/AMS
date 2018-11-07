@@ -14,6 +14,7 @@ namespace MVCcalendar.Controllers
             return View();
         }
 
+
         public JsonResult GetEvents()
         {
             using (DatabaseEntities dc = new DatabaseEntities())
